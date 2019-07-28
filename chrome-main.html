@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="bg-dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chrome extensions</title>
+    <link rel="stylesheet" href="./modules/css/bootstrap.css">
+    <script src="./modules/jquery.js"></script>
+    <script src="./modules/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./modules/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <style>
+        #main{
+            width: 300px;
+            height: 300px;
+            border: 2px solid white;
+            overflow-y: scroll;
+        }
+        .circle{
+            height:100px;
+            width: 100px;
+            border: 3px solid white;
+            border-radius: 100%;
+            text-align: center;
+            margin: auto;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle:hover{
+            cursor: pointer;
+           transform: scale(1.1)
+        }
+        .fa-refresh:hover{
+            transform: rotate(170deg);
+            transition-duration: 5s;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div id="main"  class="bg-dark text-white">
+        <ul class="nav nav-pills nav-justified sticky-top bg-dark">
+            <li class="nav-item"><a href="#tab1"  data-toggle="tab" class="nav-link  btn-sm">
+                    <i class="fa fa-battery-3 fa-rotate-270" ></i>
+                </a></li>
+            <li class="nav-item"><a href="#tab2"  data-toggle="tab" class="nav-link active btn-sm">
+                <i class="fa fa-user-o"></i>
+
+            </a></li>
+            <li class="nav-item"><a href="#tab3"  data-toggle="tab" class="nav-link btn-sm">link 3</a></li>
+            <li class="nav-item"><a href="#about"  data-toggle="tab" class="nav-link btn-sm">
+               About
+            </a></li>
+        </ul>
+        <div class="tab-content container-fluid " >
+                <div class="tab-pane container fade" id="tab1">
+                    <i class="fa fa-refresh align-self-end pull-right btn btn-default"></i>
+                    <div class="mt-5 mb-3 circle">
+                        <script>
+                            console.log(getBatteryStatus())
+                        document.write(getBatteryStatus())                            
+                        </script>
+                    </div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, recusandae?
+                </div>
+                <div class="tab-pane active " id="tab2">
+                    <form>
+                            <div class="form-group">
+                                <label for="user" >user</label>
+                                <input type="text" name="user" id="user" placeholder="name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" >password</label>
+                                <input type="password" name="password" id="password" placeholder="password" class="form-control">
+                            </div>
+                        <div class="checkbox">
+                            <label for="remeberme"><input type="checkbox" name="remeberme" id="rememberme"> remeberme</label>
+                                
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success ">login</button>
+                         </div>      
+                    </form>
+               
+                </div>
+                <div class="tab-pane container fade" id="tab3">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea totam explicabo, repudiandae non ipsum harum saepe porro voluptatibus cumque fugit, perspiciatis ut ratione neque incidunt obcaecati quidem architecto illo tempore inventore? Exercitationem consequatur ab, laboriosam perspiciatis beatae ut repellendus accusantium aspernatur eius ea delectus quo dolores, magnam ipsam laudantium sapiente! Voluptates cumque aliquam minima culpa voluptatum! Distinctio sint molestiae ea id nemo odit perferendis a quis vero earum! Quo repellendus error voluptates, vero maxime quod dolores cumque id ex cupiditate, delectus consectetur qui veniam, eos suscipit amet. Cupiditate suscipit maiores officiis, facere minus quo, dolore excepturi, doloribus ut sapiente quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, adipisci?
+                </div>
+                <div class="tab-pane container fade" id="about">
+                        <h5>App</h5>
+                        Lorem, ipsum Lorem, ipsum dolor.
+                        <h5>author</h5>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, dolore?
+
+                </div>
+        
+        </div>
+                
+
+
+    </div>
+</body>
+</html>
